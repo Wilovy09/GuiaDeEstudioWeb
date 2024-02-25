@@ -1,0 +1,599 @@
+<!-- 
+    xs (extra small, < 576px)
+    sm (small, >= 576px)
+    md (medium, >= 768px)
+    lg (large, >= 992px)
+    xl (extra large, >= 1200px)
+    xxl (extra extra large, >= 1400px)
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="./styles/bootstrap.min.css" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./styles/app.css">
+		<!-- JQuery UI CSS -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+		<!-- Icono -->
+		<link
+			rel="shortcut icon"
+			href="./Public/emoji.svg"
+			type="image/x-icon"
+		/>
+		<!-- Title -->
+		<title>Guia de estudio | 1925475</title>
+	</head>
+	<body class="container overflow-auto">
+		<!--  ---------- NAVBAR ----------  -->
+		<nav class="navbar bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/">
+					<img src="./Public/emoji.svg" width="40" alt="LOGO" />
+				</a>
+				<form class="d-flex" role="search">
+					<input
+						id="userSearch"
+						class="form-control me-2 ui-widget"
+						type="search"
+						placeholder="Buscar"
+						aria-label="Search"
+					/>
+					<button class="btnSearch">Buscar</button>
+				</form>
+			</div>
+		</nav>
+
+		<!--  ----------  ----------  -->
+		<section class="">
+			<h1 class="text-center">Guia de estudio</h1>
+			<!-- ---------- HTML ---------- -->
+			<article id="html">
+				<h2 class="text-center">HTML</h2>
+				<h3 id="quéeshtml">¿Qué es HTML?</h3>
+				<p class="">
+					<i>Que va a ir y en donde va ir</i>
+					<br />
+					<br />
+					<b>HTML</b>, o <b>HyperText Markup Language</b> (<b
+						>Lenguaje de Marcado de Hipertexto</b
+					>), es el lenguaje estándar utilizado para crear y diseñar
+					páginas web. Es un lenguaje de marcado que permite
+					estructurar el contenido de una página web mediante el uso
+					de <b>etiquetas</b> o elementos que describen la semántica y
+					la estructura del documento. <br />
+					En términos más simples, HTML proporciona la estructura
+					básica de una página web, definiendo los diferentes
+					elementos que componen la página, como encabezados,
+					párrafos, listas, enlaces, imágenes, formularios, entre
+					otros. Estos elementos se organizan mediante etiquetas HTML,
+					que son instrucciones delimitadas por corchetes angulares
+					<br />
+					("<" y ">") que indican al navegador web cómo mostrar el
+					contenido. HTML es fundamental para la creación de páginas
+					web ya que proporciona la base sobre la cual se construye el
+					contenido y la apariencia visual de un sitio web. <br />
+					Trabaja en conjunto con otros lenguajes como CSS (Cascading
+					Style Sheets) para el diseño y la presentación visual, y
+					JavaScript para la interactividad y la funcionalidad
+					dinámica. Juntos, estos tres lenguajes forman la tríada
+					básica de desarrollo web.
+				</p>
+				<h3 id="estructurabásicadehtml">Estructura básica de HTML</h3>
+
+				<pre>
+					<code>
+	<span class="comentario">&lt;!-- Con esta linea explicamos que queremos usar HTML 5 --&gt;</span>
+	&lt;!DOCTYPE html&gt;
+
+	<span class="comentario">&lt;!-- Aqui le decimos al explorador el lenguaje en el que esta escrito la página --&gt;</span>
+	&lt;html lang="es"&gt;
+
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+		<span class="comentario">&lt;!-- Este es el titulo que aparecera en el "tab" --&gt;</span>
+		&lt;title&gt;Document&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		<span class="comentario">&lt;!-- Tu código HTML va aquí --&gt;</span>
+	&lt;/body&gt;
+	&lt;/html&gt;
+					</code>
+				</pre>
+
+				<h3 id="encabezados">- Encabezados</h3>
+				<p>
+					Representados por las etiquetas &lt;h1&gt; a &lt;h6&gt;, se
+					utilizan para definir títulos y subtítulos en una página
+					web.
+				</p>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Código</th>
+							<th scope="col">Resultado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								&lt;h1&gt;Esto es un h1&lt;/h1&gt;
+							</th>
+							<td><h1>Esto es un h1</h1></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								&lt;h2&gt;Esto es un h2&lt;/h2&gt;
+							</th>
+							<td><h2>Esto es un h2</h2></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								&lt;h3&gt;Esto es un h3&lt;/h3&gt;
+							</th>
+							<td><h3>Esto es un h3</h3></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								&lt;h4&gt;Esto es un h4&lt;/h4&gt;
+							</th>
+							<td><h4>Esto es un h4</h4></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								&lt;h5&gt;Esto es un h5&lt;/h5&gt;
+							</th>
+							<td><h5>Esto es un h5</h5></td>
+						</tr>
+						<tr>
+							<th scope="row">
+								&lt;h6&gt;Esto es un h6&lt;/h6&gt;
+							</th>
+							<td><h6>Esto es un h6</h6></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 id="párrafos">- Párrafos</h3>
+				Representados por la etiqueta &lt;p&gt;, se usan para agrupar
+				texto en párrafos.
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Código</th>
+							<th scope="col">Resultado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								&lt;p&gt;Esto es un párrafo&lt;/p&gt;
+							</th>
+							<td><p>Esto es un párrafo</p></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 id="imágenes">- Imágenes</h3>
+				<p>
+					Representadas por la etiqueta &lt;img&gt;, se utilizan para
+					incrustar imágenes en una página web. Se debe proporcionar
+					la URL de la imagen en el atributo "src".
+				</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Código</th>
+							<th scope="col">Resultado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">&lt;img src="..."/&gt;</th>
+							<td>
+								<img
+									src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
+									width="50"
+								/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Atributo</th>
+							<th scope="col">Descripción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">src</th>
+							<td>
+								Este atributo es usado para definir la ruta de
+								la imágen que usaremos, puede ser una ruta de la
+								web o una ruta relativa
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">alt</th>
+							<td>
+								Este atributo es usado para definir un texto
+								alterativo por si la imágen no llega cargar o
+								ser encontrada.
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">weight</th>
+							<td>
+								Este atributo es usado para definir la anchura
+								de la imagen a utlizar, por defecto usa pixeles
+								como medida.
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">height</th>
+							<td>
+								Este atributo es usado para definir la altura de
+								la imagen a utlizar, por defecto usa pixeles
+								como medida.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 id="hipervínculos">- Hipervínculos</h3>
+				<p>
+					Representados por la etiqueta &lt;a&gt;, se usan para crear
+					enlaces a otras páginas web o recursos. Se debe proporcionar
+					la URL de destino en el atributo "href".
+				</p>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Código</th>
+							<th scope="col">Resultado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								&lt;a href="..."&gt;Link&lt;/a&gt;
+							</th>
+							<td>
+								<a
+									href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+									target="_blank"
+									>Bootstrap</a
+								>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 id="listas">- Listas</h3>
+				<p>Existen 3 tipos de listas.</p>
+				<h4>Listas ordenadas</h4>
+				<p>
+					Representadas por la etiqueta &lt;ol&gt;, se utilizan para
+					crear listas ordenadas. Cada elemento de la lista se define
+					mediante la etiqueta &lt;li&gt;.
+				</p>
+				<pre>
+					<code>
+	&lt;ol&gt;
+		&lt;li&gt;Elemento 1&lt;/li&gt;
+		&lt;li&gt;Elemento 2&lt;/li&gt;
+		&lt;li&gt;Elemento 3&lt;/li&gt;
+	&lt;/ol&gt;        
+					</code>
+				</pre>
+				<ol>
+					<li>Elemento 1</li>
+					<li>Elemento 2</li>
+					<li>Elemento 3</li>
+				</ol>
+				<h4>Listas desordenadas</h4>
+				<p>
+					Representadas por la etiqueta &lt;ul&gt;, se utilizan para
+					crear listas desordenadas. Cada elemento de la lista se
+					define mediante la etiqueta &lt;li&gt;.
+				</p>
+				<pre>
+					<code>
+	&lt;ul&gt;
+		&lt;li&gt;Elemento 1&lt;/li&gt;
+		&lt;li&gt;Elemento 2&lt;/li&gt;
+		&lt;li&gt;Elemento 3&lt;/li&gt;
+	&lt;/ul&gt;        
+					</code>
+				</pre>
+				<ul>
+					<li>Elemento 1</li>
+					<li>Elemento 2</li>
+					<li>Elemento 3</li>
+				</ul>
+				<h4>Listas de definición</h4>
+				<p>
+					Representadas por la etiqueta &lt;dl&gt;, se utilizan para
+					crear listas de definición. Cada término de la lista se
+					define mediante la etiqueta &lt;dt&gt;, y su definición se
+					define mediante la etiqueta &lt;dd&gt;.
+				</p>
+				<pre>
+					<code>
+	&lt;dl&gt;
+		&lt;dt&gt;Termino 1&lt;/dt&gt;
+		&lt;dd&gt;Definición 1&lt;/dd&gt;
+		&lt;dt&gt;Termino 2&lt;/dt&gt;
+		&lt;dd&gt;Definición 2&lt;/dd&gt;
+	&lt;/dl&gt;
+					</code>
+				</pre>
+				<dl>
+					<dt>Termino 1</dt>
+					<dd>Definición 1</dd>
+					<dt>Termino 2</dt>
+					<dd>Definición 2</dd>
+				</dl>
+			</article>
+
+			<!--  ---------- CSS ----------  -->
+			<hr />
+			<article id="css">
+				<h2 class="text-center">CSS</h2>
+				<h3>¿Qué es CSS?</h3>
+				<p>
+					<i>Como se ven las cosas.</i>
+					<br>
+					<br>
+					CSS (<b>Cascading Style Sheets</b>) es un lenguaje de estilo
+					utilizado para definir la presentación y el aspecto visual
+					de un documento HTML. Con CSS, puedes controlar la
+					apariencia de elementos HTML, como el color, el tamaño, la
+					fuente y el diseño. CSS permite separar la estructura del
+					contenido HTML de su estilo, lo que facilita la creación de
+					sitios web con un diseño coherente y flexible. Además, al
+					utilizar reglas de estilo, CSS permite aplicar estilos de
+					manera eficiente y consistente en todo un sitio web.
+				</p>
+				<!-- -------------------------------------------------------- -->
+				<h3>- Propiedades y valores</h3>
+				<p>
+					Las propiedades son características que deseas cambiar, como
+					el color o el tamaño del texto. Los valores son los ajustes
+					específicos que le das a esas propiedades.
+				</p>
+
+				<pre>
+						<code>
+	p {
+		<span class="comentario">/* Cambia el color del texto a azul */</span>
+		color: blue; 
+		
+		<span class="comentario">/* Tamaño de la letra en 16 píxeles */</span>
+		font-size: 16px;
+	}						
+						</code>
+					</pre>
+				<!-- -------------------------------------------------------- -->
+				<h3>- Selectores</h3>
+				<dl>
+					<dt>Por elemento</dt>
+					<dd>
+						<pre>
+								<code>
+	p {
+		color: red;
+	}
+								</code>
+							</pre>
+					</dd>
+					<dt>Por clase</dt>
+					<dd>
+						<pre>
+							<code>
+	.clase {
+		color: red;
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Por ID</dt>
+					<dd>
+						<pre>
+							<code>
+	#id {
+		color: red;
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Selecciona todo (*)</dt>
+					<dd>
+						<pre>
+							<code>
+	* {
+		<span class="comentario">/* Las reglas que escribamos con este selector 
+		se aplicaran a todos los elementos, 
+		si es que estos no tiene reglas ya definidas */</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Combinación de clases</dt>
+					<dd>
+						<pre>
+							<code>
+	.clase1.clase2 {
+		<span class="comentario">/* Estilos para elementos que tienen 
+		ambas clases "clase1" y "clase2" */</span>
+	}								
+							</code>
+						</pre>
+					</dd>
+					<dt>Elemento con clase</dt>
+					<dd>
+						<pre>
+							<code>
+	p.clase {
+		<span class="comentario">/* Estilos para elementos p que también tienen 
+		la clase "clase" */</span>
+	}								
+							</code>
+						</pre>
+					</dd>
+					<dt>Selectores multiples</dt>
+					<dd>
+						<pre>
+							<code>
+	p, .clase, #id {
+		<span class="comentario">/* Estilos aplicados a los elementos p, .clase y #id */</span>
+	}
+							</code>
+						</pre>
+					</dd>
+				</dl>
+				<!-- -------------------------------------------------------- -->
+				<h3>- Formas de usar CSS</h3>
+				<p>
+					Hay tres formas de usar CSS en un documento HTML:
+					<b>en línea</b>, <b>incrustado</b> y <b>externo</b>.
+				</p>
+				<dl>
+					<dt>En línea</dt>
+					<dd>
+						<pre>
+							<code>
+&lt;p style="color: blue; font-size: 16px;"&gt;Este es un párrafo con estilos en línea.&lt;/p&gt;
+								</code>
+						</pre>
+						<p style="color: blue; font-size: 16px">
+							Este es el resultado con los estilos en línea.
+						</p>
+					</dd>
+					<dt>Incrustado</dt>
+					<dd>
+						<pre>
+							<code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;title&gt;Ejemplo de CSS&lt;/title&gt;
+	&lt;style&gt;
+	p {
+		color: green;
+		font-size: 18px;
+	}
+	&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Este es un párrafo con estilos incrustados.&lt;/p&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+							</code>
+						</pre>
+						<p style="color: green; font-size: 18px">
+							Este es un párrafo con estilos incrustados.
+						</p>
+					</dd>
+					<dt>Externo</dt>
+					<dd>
+						<span>
+							<pre>
+								<code>
+	<span class="comentario">&lt;-- index.html --&gt;</span>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;title&gt;Ejemplo de CSS&lt;/title&gt;
+		<span class="comentario">&lt;-- Aqui enlazamos el archivo de CSS --&gt;</span>
+		&lt;link rel="stylesheet" href="styles.css"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;Este es un párrafo con estilos externos.&lt;/p&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;								
+								</code>
+							</pre>
+							<pre>
+								<code>
+	<span class="comentario">/* styles.css */</span>
+	p {
+		color: red;
+		font-size: 20px;
+	}								
+								</code>
+							</pre>
+							<p style="color: red; font-size: 20px">
+								Este es un párrafo con estilos externos.
+							</p>
+						</span>
+					</dd>
+				</dl>
+				<!-- -------------------------------------------------------- -->
+			</article>
+
+			<!--  ---------- BOOTSTRAP ----------  -->
+			<hr />
+			<article id="bootstrap">
+				<h2 class="text-center">Bootstrap</h2>
+			</article>
+
+			<!--  ---------- JAVASCRIPT ----------  -->
+			<hr />
+			<article id="Javascript">
+				<h2 class="text-center">JavaScript</h2>
+			</article>
+
+			<!--  ---------- JQUERY ----------  -->
+			<hr />
+			<article id="jquery">
+				<h2 class="text-center">JQuery</h2>
+			</article>
+		</div>
+
+		<!--  ---------- FOOTER ----------  -->
+		<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+			<div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+				<div class="row">
+					<div class="col-6 col-lg-2 mb-3">
+					<h5>Técnologias usadas</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="/docs/5.3/getting-started/">HTML</a></li>
+						<li class="mb-2"><a href="/docs/5.3/examples/starter-template/">CSS</a></li>
+						<li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">JS</a></li>
+						<li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Bootstrap</a></li>
+						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">JQuery</a></li>
+						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">JQuery UI</a></li>
+						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Github</a></li>
+					</ul>
+					</div>
+					<div class="col-6 col-lg-2 mb-3">
+					<h5>Contacto</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Github</a></li>
+						<li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Repositorio</a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JQuery & JS -->
+		<script src="./app/bootstrap.bundle.min.js"></script>
+		<script src="./app/jquery-3.7.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		<script src="./app/app.js"></script>
+	</body>
+</html>
