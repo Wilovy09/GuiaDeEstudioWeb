@@ -30,7 +30,7 @@
 		<!--  ---------- NAVBAR ----------  -->
 		<nav class="navbar bg-body-tertiary">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand" href="./index.html">
 					<img src="./Public/emoji.svg" width="40" alt="LOGO" />
 				</a>
 				<form class="d-flex" role="search">
@@ -343,12 +343,11 @@
 					<dd>Definición 2</dd>
 				</dl>
 			</article>
-
 			<!--  ---------- CSS ----------  -->
 			<hr />
 			<article id="css">
 				<h2 class="text-center">CSS</h2>
-				<h3>¿Qué es CSS?</h3>
+				<h3 id="quéescss">¿Qué es CSS?</h3>
 				<p>
 					<i>Como se ven las cosas.</i>
 					<br>
@@ -364,7 +363,7 @@
 					manera eficiente y consistente en todo un sitio web.
 				</p>
 				<!-- -------------------------------------------------------- -->
-				<h3>- Propiedades y valores</h3>
+				<h3 id="propiedadesyvalores">- Propiedades y valores</h3>
 				<p>
 					Las propiedades son características que deseas cambiar, como
 					el color o el tamaño del texto. Los valores son los ajustes
@@ -383,7 +382,7 @@
 						</code>
 					</pre>
 				<!-- -------------------------------------------------------- -->
-				<h3>- Selectores</h3>
+				<h3 id="selectores">- Selectores</h3>
 				<dl>
 					<dt>Por elemento</dt>
 					<dd>
@@ -461,7 +460,7 @@
 					</dd>
 				</dl>
 				<!-- -------------------------------------------------------- -->
-				<h3>- Formas de usar CSS</h3>
+				<h3 id="formasdeusarcss">- Formas de usar CSS</h3>
 				<p>
 					Hay tres formas de usar CSS en un documento HTML:
 					<b>en línea</b>, <b>incrustado</b> y <b>externo</b>.
@@ -542,6 +541,114 @@
 					</dd>
 				</dl>
 				<!-- -------------------------------------------------------- -->
+				<h3 id="variables">- Variables</h3>
+				<p>Las variables en CSS se crean usando la siguiente sintaxis:</p>
+				<pre>
+					<code>
+	<span class="comentario">/* Aqui agregaremos todas nuestras vaiables CSS */</span>
+	:root{
+		--color-Cafe: brown;
+	}
+					</code>
+				</pre>
+				<p>Para hacer referencia a la variable se utiliza la funcion <b>var()</b>.</p>
+
+				<pre>
+					<code>
+	<span class="comentario">/* Aqui usamos la variable que creamos anteriormente */</span>
+	p {
+		color: var(--color-Cafe);
+	}
+					</code>
+				</pre>
+				<p style="color:brown;">Este es párrafo color café</p>
+				<!-- -------------------------------------------------------- -->
+				<h3 id="elmodelodecaja">- El modelo de caja</h3>
+				<p>
+					El modelo de caja es un concepto fundamental en CSS que
+					describe cómo se representan los elementos HTML en una
+					página web. Cada elemento HTML se representa como una caja
+					rectangular que consta de cuatro áreas principales:
+				</p>
+				<dl>
+					<dt>Margen / Margin</dt>
+					<dd>Es el espacio entre el borde de la caja y los elementos adyacentes. Los márgenes ayudan a controlar el espacio entre los diferentes elementos en la página.</dd>
+					<dt>Borde / Border</dt>
+					<dd>Es la línea que rodea el contenido y el relleno de la caja. Puede tener un grosor, un estilo (como sólido, punteado, etc.) y un color definidos.</dd>
+					<dt>Relleno / Padding</dt>
+					<dd>Es el espacio entre el contenido y el borde de la caja. El relleno ayuda a separar el contenido del borde.</dd>
+					<dt>Contenido / Content</dt>
+					<dd>Esta es el área donde se muestra el contenido del elemento, como texto, imágenes, etc.</dd>
+				</dl>
+				<!-- -------------------------------------------------------- -->
+				<h3 id="anidado">- Anidado</h3>
+				<p><i>Puedes ver la compatibilidad de los navegadores con esta característica en <a href="https://caniuse.com/?search=nesting%20selector" target="_blank">Can i use?</a> </i></p>
+				<p>
+					El anidado en CSS, utilizando el operador &, fue introducido como una característica 
+					en preprocesadores de CSS como Sass (Syntactically Awesome Stylesheets) y Less (Leaner CSS). 
+					Esta característica permite hacer referencia al selector padre dentro de un conjunto de reglas CSS 
+					anidadas. Aunque no inicio como una característica nativa de CSS puro, se ha vuelto muy popular debido 
+					a su capacidad para mejorar la legibilidad y mantenibilidad del código CSS.
+					El anidado permite estructurar el código CSS de manera más intuitiva, especialmente cuando se 
+					trabaja con estilos para componentes que tienen una estructura jerárquica. 
+					Permite escribir estilos de forma más concisa al evitar la repetición de selectores comunes.
+					El anidado ya forma parte de las caracteristicas nativas de CSS, puedes escribir reglas CSS anidadas como esta:
+				</p>
+				<h4>Ejemplo</h4>
+				<h5>Antes (sin anidado)</h5>
+				<pre>
+					<code>
+	<span class="comentario">&lt;!-- index.html --&gt;</span>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;link rel="stylesheet" href="styles.css"&gt;
+		&lt;title&gt;Document&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class="card"&gt;
+			&lt;h2 class="card-title"&gt;Título de la tarjeta&lt;/h2&gt;
+			&lt;p class="card-text"&gt;Texto de la tarjeta&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+					</code>
+				</pre>
+				<pre>
+					<code>
+	<span class="comentario">/* styles.css */</span>
+	.card {
+		border: 1px solid #000;
+		padding: 10px;
+	}
+	.card-title {
+		font-size: 20px;
+	}
+	.card-text {
+		font-size: 16px;
+	}
+					</code>
+				</pre>
+				<h5>Ahora (con anidado '&' )</h5>
+				<pre>
+					<code>
+	<span class="comentario">/* styles.css */</span>
+	.card {
+		border: 1px solid #000;
+		padding: 10px;
+		
+		&.card-title {
+			font-size: 20px;
+		}
+		&.card-text {
+			font-size: 16px;
+		}
+	}
+					</code>
+				</pre>
+				<!-- -------------------------------------------------------- -->
 			</article>
 
 			<!--  ---------- BOOTSTRAP ----------  -->
@@ -568,23 +675,23 @@
 			<div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
 				<div class="row">
 					<div class="col-6 col-lg-2 mb-3">
-					<h5>Técnologias usadas</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="/docs/5.3/getting-started/">HTML</a></li>
-						<li class="mb-2"><a href="/docs/5.3/examples/starter-template/">CSS</a></li>
-						<li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">JS</a></li>
-						<li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Bootstrap</a></li>
-						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">JQuery</a></li>
-						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">JQuery UI</a></li>
-						<li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Github</a></li>
-					</ul>
+						<h5>Contacto</h5>
+						<ul class="list-unstyled">
+							<li class="mb-2"><a target="_blank" href="https://github.com/Wilovy09" target="_blank" rel="noopener">Github</a></li>
+							<li class="mb-2"><a target="_blank" href="https://www.wilovy.com/" target="_blank" rel="noopener">Repositorio</a></li>
+						</ul>
 					</div>
 					<div class="col-6 col-lg-2 mb-3">
-					<h5>Contacto</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Github</a></li>
-						<li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Repositorio</a></li>
-					</ul>
+						<h5>Técnologias usadas</h5>
+						<ul class="list-unstyled">
+							<li class="mb-2"><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
+							<li class="mb-2"><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
+							<li class="mb-2"><a target="_blank" href="https://developer.mozilla.org/es/docs/Web/JavaScript">JS</a></li>
+							<li class="mb-2"><a target="_blank" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap</a></li>
+							<li class="mb-2"><a target="_blank" href="https://api.jquery.com/">JQuery</a></li>
+							<li class="mb-2"><a target="_blank" href="https://api.jqueryui.com/">JQuery UI</a></li>
+							<li class="mb-2"><a target="_blank" href="https://github.com/Wilovy09/GuiaDeEstudioWeb">Github</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
