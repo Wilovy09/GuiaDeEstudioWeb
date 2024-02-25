@@ -35,7 +35,7 @@ $(document).ready(function(){
         "Listas",
         "",
         "CSS",
-        "¿Qué es CSS?",
+        "Qué es CSS",
         "Propiedades y valores",
         "Selectores",
         "Formas de usar CSS",
