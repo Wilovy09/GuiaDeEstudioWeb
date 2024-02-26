@@ -784,6 +784,752 @@
 			<article id="javascript">
 				<h2 class="text-center">JavaScript</h2>
 				<h3 id="quéesjavascript">¿Qué es JavaScript/JS?</h3>
+				<p>JS es un <i><b>lenguaje interpretado</b></i> de alto nivel.</p>
+				<p>
+					<b>JavaScript</b> es un lenguaje de programación popular que se utiliza 
+					principalmente para crear interactividad en páginas web. Es un lenguaje 
+					de programación de alto nivel, interpretado por los navegadores web para 
+					mejorar la funcionalidad y el diseño de los sitios web. Con JavaScript, 
+					los desarrolladores pueden crear <b>efectos visuales dinámicos</b>, <b>validar formularios</b>, 
+					<b>manipular contenido</b>, <b>gestionar eventos del usuario</b> y mucho más. 
+					Además de su uso en el desarrollo web, JavaScript también se utiliza en 
+					otros entornos, como el desarrollo de <b>aplicaciones móviles</b> y de <b>escritorio</b>.
+				</p>
+
+				<h3 id="comousarjavascript">- ¿Como usar JavaScript?</h3>
+				<p>
+					Existen tres formas de usar JavaScript en un documento HTML:
+					<dl>
+						<dt>En línea</dt>
+						<dd>
+							<pre>
+								<code>
+	&lt;button onclick="alert('Hola mundo!')"&gt;Haz click&lt;/button&gt;
+								</code>
+							</pre>
+						</dd>
+						<dt>Incrustado</dt>
+						<dd>
+							<pre>
+								<code>
+	&lt;script&gt;
+		alert('Hola mundo!');
+	&lt;/script&gt;
+								</code>
+							</pre>
+						</dd>
+						<dt>Externo</dt>
+						<dd>
+							<pre>
+								<code>
+	<span class="comentario">&lt;!-- index.html --&gt;</span>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;button onclick="saludar()"&gt;Haz click&lt;/button&gt;
+
+		<span class="comentario">&lt;!-- Aqui enlazamos el archivo de JavaScript --&gt;</span>
+		&lt;script src="app.js"&gt;&lt;/script&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+								</code>
+							</pre>
+						</dd>
+					</dl>
+				</p>
+
+				<h3 id="variables">- Variables</h3>
+				<p>
+					Las variables en JavaScript se crean utilizando la palabra clave
+					<b>var</b>, <b>let</b> o <b>const</b>.
+				</p>
+				<pre>
+					<code>
+	<span class="comentario">// Declaración de variable con var</span>
+	var nombre = "Juan";
+	<span class="comentario">// si usamos var se deeclara de forma global</span>
+
+	<span class="comentario">// Declaración de variable con let</span>
+	let edad = 25;
+	<span class="comentario">// si usamos let se deeclara de forma local</span>
+
+
+	<span class="comentario">// Declaración de constante con const</span>
+	const PI = 3.1416;
+					</code>
+				</pre>
+
+				<h3 id="tiposdedatos">- Tipos de datos</h3>
+				<p>
+					JavaScript es un lenguaje de programación <b>no tipado</b>, lo que
+					significa que no es necesario declarar el tipo de dato de una
+					variable antes de usarla. Los tipos de datos en JavaScript son:
+				</p>
+				<dl>
+					<dt>String</dt>
+					<dd>Representa una secuencia de caracteres.</dd>
+					<dt>Number</dt>
+					<dd>Representa un número.</dd>
+					<dt>Boolean</dt>
+					<dd>Representa un valor lógico: verdadero o falso.</dd>
+					<dt>Object</dt>
+					<dd>Representa un objeto.</dd>
+					<dt>Array</dt>
+					<dd>Representa una colección de elementos.</dd>
+					<dt>Function</dt>
+					<dd>Representa una función.</dd>
+					<dt>Null</dt>
+					<dd>Representa un valor nulo.</dd>
+					<dt>Undefined</dt>
+					<dd>Representa un valor indefinido.</dd>
+				</dl>
+
+				<h3 id="operadores">- Operadores</h3>
+				<p>
+					Los operadores en JavaScript se utilizan para realizar operaciones
+					aritméticas, de comparación, lógicas y de asignación. Algunos de
+					los operadores más comunes en JavaScript son:
+				</p>
+				<dl>
+					<dt>Aritméticos</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Suma</span>
+	+
+	<span class="comentario">// Resta</span>
+	-
+	<span class="comentario">// Multiplicación</span>
+	*
+	<span class="comentario">// División</span>
+	/
+	<span class="comentario">// Módulo</span>
+	%
+							</code>
+						</pre>
+					</dd>
+					<dt>Comparación</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Igual a</span>
+	==
+	<span class="comentario">// No igual a</span>
+	!=
+	<span class="comentario">// Mayor que</span>
+	>
+	<span class="comentario">// Menor que</span>
+	<
+	<span class="comentario">// Mayor o igual que</span>
+	>=
+	<span class="comentario">// Menor o igual que</span>
+	<=
+							</code>
+						</pre>
+					</dd>
+					<dt>Lógicos</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Y</span>
+	&&
+	<span class="comentario">// O</span>
+	||
+	<span class="comentario">// No</span>
+	!
+							</code>
+						</pre>
+					</dd>
+					<dt>Asignación</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Asignación</span>
+	=
+	<span class="comentario">// Suma y asignación</span>
+	+=
+	<span class="comentario">// Resta y asignación</span>
+	-=
+	<span class="comentario">// Multiplicación y asignación</span>
+	*=
+	<span class="comentario">// División y asignación</span>
+	/=
+	<span class="comentario">// Módulo y asignación</span>
+	%=
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="condicionales">- Condicionales</h3>
+				<p>
+					Los condicionales en JavaScript se utilizan para tomar decisiones
+					basadas en ciertas condiciones. Algunos de los condicionales más
+					comunes en JavaScript son:
+				</p>
+				<dl>
+					<dt>If</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Si la condición es verdadera, se ejecuta el bloque de código</span>
+	if (condición) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Else</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Si la condición es falsa, se ejecuta el bloque de código</span>
+	else {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Else if</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Si la condición anterior es falsa, se evalúa esta condición</span>
+	else if (condición) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Switch</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Evalúa una expresión y ejecuta el bloque de código correspondiente</span>
+	switch (expresión) {
+		case valor1:
+			<span class="comentario">// Bloque de código</span>
+			break;
+		case valor2:
+			<span class="comentario">// Bloque de código</span>
+			break;
+		default:
+			<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="bucles">- Bucles</h3>
+				<p>
+					Los bucles en JavaScript se utilizan para ejecutar un bloque de
+					código varias veces. Algunos de los bucles más comunes en
+					JavaScript son:
+				</p>
+				<dl>
+					<dt>For</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Inicialización; Condición; Incremento</span>
+	for (let i = 0; i < 10; i++) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>While</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Mientras la condición sea verdadera, se ejecuta el bloque de código</span>
+	while (condición) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Do while</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Ejecuta el bloque de código al menos una vez, y luego repite el bucle mientras la condición sea verdadera</span>
+	do {
+		<span class="comentario">// Bloque de código</span>
+	} while (condición);
+							</code>
+						</pre>
+					</dd>
+					<dt>For in</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Itera sobre las propiedades de un objeto</span>
+	for (let propiedad in objeto) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>For of</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Itera sobre los valores de un objeto iterable</span>
+	for (let valor of iterable) {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="funciones">- Funciones</h3>
+				<p>
+					Las funciones en JavaScript se utilizan para encapsular un bloque
+					de código y ejecutarlo cuando sea necesario. Algunos de los
+					elementos más comunes en JavaScript son:
+				</p>
+				<dl>
+					<dt>Declaración</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Declaración de función</span>
+	function nombreFuncion() {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Expresión</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Expresión de función</span>
+	let nombreFuncion = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+					<dt>Flecha</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Función de flecha</span>
+	let nombreFuncion = () => {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="objetos">- Objetos</h3>
+				<p>
+					Los objetos en JavaScript se utilizan para almacenar colecciones de
+					datos y métodos. Los objetos en JavaScript son colecciones de
+					propiedades y métodos, y se definen utilizando llaves.
+				</p>
+				<pre>
+					<code>
+	<span class="comentario">// Declaración de objeto</span>
+	let objeto = {
+		propiedad1: valor1,
+		propiedad2: valor2,
+		metodo: function() {
+			<span class="comentario">// Bloque de código</span>
+		}
+	};
+					</code>
+				</pre>
+
+				<h3 id="clases">- Clases</h3>
+				<p>
+					Las clases en JavaScript se utilizan para crear objetos. Las clases
+					son una forma de definir un tipo de objeto y luego crear
+					instancias de ese tipo. Las clases en JavaScript se definen
+					utilizando la palabra clave <b>class</b>.
+				</p>
+				<pre>
+					<code>
+	<span class="comentario">// Declaración de clase</span>
+	class NombreClase {
+		<span class="comentario">// Código</span>
+	}
+					</code>
+				</pre>
+
+				<h3 id="eventos">- Eventos</h3>
+				<p>
+					Los eventos en JavaScript se utilizan para detectar acciones del
+					usuario, como hacer clic en un botón, desplazarse por una página
+					web, escribir en un campo de texto, etc. Algunos de los eventos
+					más comunes en JavaScript son:
+				</p>
+				<dl>
+					<dt>Click</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Se ejecuta cuando se hace clic en un elemento</span>
+	elemento.onclick = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+					<dt>Mouseover</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Se ejecuta cuando el puntero del ratón se mueve sobre un elemento</span>
+	elemento.onmouseover = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+					<dt>Mouseout</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Se ejecuta cuando el puntero del ratón se mueve fuera de un elemento</span>
+	elemento.onmouseout = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+					<dt>Keydown</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Se ejecuta cuando se presiona una tecla</span>
+	elemento.onkeydown = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="dom">- DOM</h3>
+				<p>
+					El <b>DOM (Document Object Model)</b> es una interfaz de programación
+					para documentos HTML y XML. El DOM representa la estructura de un
+					documento como un árbol de nodos, donde cada nodo representa una
+					parte del documento (por ejemplo, un elemento HTML, un atributo,
+					un comentario, etc.). El DOM es una interfaz de programación que
+					permite a los programadores manipular la estructura, el estilo y
+					el contenido de un documento.
+				</p>
+				<p>
+					El DOM se utiliza en JavaScript para acceder y manipular elementos
+					HTML. Algunos de los métodos más comunes para acceder y manipular
+					el DOM en JavaScript son:
+				</p>
+				<dl>
+					<dt>getElementById</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Obtiene un elemento por su ID</span>
+	document.getElementById('id');
+							</code>
+						</pre>
+					</dd>
+					<dt>getElementsByClassName</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Obtiene elementos por su clase</span>
+	document.getElementsByClassName('clase');
+							</code>
+						</pre>
+					</dd>
+					<dt>getElementsByTagName</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Obtiene elementos por su etiqueta</span>
+	document.getElementsByTagName('etiqueta');
+							</code>
+						</pre>
+					</dd>
+					<dt>querySelector</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Obtiene el primer elemento que coincida con un selector</span>
+	document.querySelector('selector');
+							</code>
+						</pre>
+					</dd>
+					<dt>querySelectorAll</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Obtiene todos los elementos que coincidan con un selector</span>
+	document.querySelectorAll('selector');
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="ajax">- AJAX</h3>
+				<p>
+					El <b>AJAX (Asynchronous JavaScript And XML)</b> es una técnica de
+					programación que se utiliza para crear aplicaciones web interactivas.
+					Permite a las aplicaciones web enviar y recibir datos del servidor
+					de forma asíncrona, sin interferir con el comportamiento de la
+					página web. El AJAX se utiliza en JavaScript para enviar y recibir
+					datos del servidor sin tener que recargar la página.
+				</p>
+				<p>
+					Algunos de los métodos más comunes para enviar y recibir datos del
+					servidor utilizando AJAX en JavaScript son:
+				</p>
+				<dl>
+					<dt>XMLHttpRequest</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Crea una nueva instancia de XMLHttpRequest</span>
+	let xhr = new XMLHttpRequest();
+							</code>
+						</pre>
+					</dd>
+					<dt>open</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Abre una nueva solicitud</span>
+	xhr.open('GET', 'archivo.txt', true);
+							</code>
+						</pre>
+					</dd>
+					<dt>send</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Envía la solicitud al servidor</span>
+	xhr.send();
+							</code>
+						</pre>
+					</dd>
+					<dt>onreadystatechange</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Define una función que se ejecuta cuando cambia el estado de la solicitud</span>
+	xhr.onreadystatechange = function() {
+		<span class="comentario">// Bloque de código</span>
+	};
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="json">- JSON</h3>
+				<p>
+					El <b>JSON (JavaScript Object Notation)</b> es un formato de intercambio
+					de datos ligero y fácil de leer. Se utiliza para enviar y recibir
+					datos entre un servidor y un cliente. El JSON se utiliza en
+					JavaScript para almacenar y transmitir datos de forma estructurada.
+				</p>
+				<p>
+					Algunos de los métodos más comunes para trabajar con JSON en
+					JavaScript son:
+				</p>
+				<dl>
+					<dt>parse</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Convierte una cadena JSON en un objeto JavaScript</span>
+	JSON.parse('{"nombre": "Juan", "edad": 25}');
+							</code>
+						</pre>
+					</dd>
+					<dt>stringify</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Convierte un objeto JavaScript en una cadena JSON</span>
+	JSON.stringify({nombre: 'Juan', edad: 25});
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="ecmascript">- ECMAScript</h3>
+				<p>
+					El <b>ECMAScript</b> es una especificación de lenguaje de programación
+					que se utiliza para definir el estándar de JavaScript. La
+					especificación de ECMAScript define la sintaxis, los tipos de
+					datos, los objetos y los métodos que se pueden utilizar en
+					JavaScript. La especificación de ECMAScript se actualiza
+					periódicamente para incluir nuevas características y funcionalidades
+					en JavaScript.
+				</p>
+				<p>
+					Algunas de las características más recientes de ECMAScript incluyen:
+				</p>
+				<ul>
+					<li>Arrow functions</li>
+					<li>Template literals</li>
+					<li>Let y const</li>
+					<li>Clases</li>
+					<li>Async y await</li>
+					<li>Y mucho más...</li>
+				</ul>
+
+				<h3 id="promesas">- Promesas</h3>
+				<p>
+					Las <b>promesas</b> en JavaScript se utilizan para manejar operaciones
+					asíncronas. Una promesa es un objeto que representa el resultado de
+					una operación asíncrona, y puede estar en uno de los siguientes
+					estados:
+				</p>
+				<ul>
+					<li>Pendiente</li>
+					<li>Resuelta</li>
+					<li>Rechazada</li>
+				</ul>
+
+				<h3 id="asyncawait">- Async y await</h3>
+				<p>
+					El <b>async</b> y <b>await</b> en JavaScript se utilizan para manejar
+					operaciones asíncronas de forma más sencilla. El async y await son
+					palabras clave que se utilizan para definir funciones asíncronas y
+					esperar el resultado de una operación asíncrona.
+				</p>
+				<p>
+					Algunos de los métodos más comunes para trabajar con async y await
+					en JavaScript son:
+				</p>
+				<dl>
+					<dt>async</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Define una función asíncrona</span>
+	async function nombreFuncion() {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>await</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Espera el resultado de una operación asíncrona</span>
+	let resultado = await operaciónAsíncrona();
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="modulos">- Módulos</h3>
+				<p>
+					Los <b>módulos</b> en JavaScript se utilizan para organizar y reutilizar
+					código. Los módulos son archivos que contienen código JavaScript y
+					se utilizan para exportar e importar funciones, variables y clases
+					entre diferentes archivos.
+				</p>
+				<p>
+					Algunos de los métodos más comunes para trabajar con módulos en
+					JavaScript son:
+				</p>
+				<dl>
+					<dt>Export</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Exporta una función, variable o clase</span>
+	export function nombreFuncion() {
+		<span class="comentario">// Bloque de código</span>
+	}
+							</code>
+						</pre>
+					</dd>
+					<dt>Import</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Importa una función, variable o clase</span>
+	import {nombreFuncion} from './archivo.js';
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="errores">- Errores</h3>
+				<p>
+					Los <b>errores</b> en JavaScript se utilizan para manejar situaciones
+					inesperadas que pueden ocurrir durante la ejecución de un programa.
+					Algunos de los errores más comunes en JavaScript son:
+				</p>
+				<dl>
+					<dt>SyntaxError</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Error de sintaxis</span>
+	throw new SyntaxError('Mensaje de error');
+							</code>
+						</pre>
+					</dd>
+					<dt>ReferenceError</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Error de referencia</span>
+	throw new ReferenceError('Mensaje de error');
+							</code>
+						</pre>
+					</dd>
+					<dt>TypeError</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Error de tipo</span>
+	throw new TypeError('Mensaje de error');
+							</code>
+						</pre>
+					</dd>
+					<dt>RangeError</dt>
+					<dd>
+						<pre>
+							<code>
+	<span class="comentario">// Error de rango</span>
+	throw new RangeError('Mensaje de error');
+							</code>
+						</pre>
+					</dd>
+				</dl>
+
+				<h3 id="debugging">- Debugging</h3>
+				<p>
+					El <b>debugging</b> en JavaScript se utiliza para encontrar y corregir
+					errores en un programa. Algunas de las técnicas más comunes para
+					hacer debugging en JavaScript son:
+				</p>
+				<ul>
+					<li>Console.log()</li>
+					<li>Debugger</li>
+					<li>Try...catch</li>
+					<li>Y mucho más...</li>
+				</ul>
 			</article>
 
 			<!--  ---------- JQUERY ----------  -->
