@@ -1535,7 +1535,252 @@
 			<!--  ---------- JQUERY ----------  -->
 			<hr />
 			<article id="jquery">
-				<h2 class="text-center">JQuery</h2>
+				<h2 class="text-center">jQuery</h2>
+				
+				<h3 id="quéesjquery">- ¿Qué es jQuery?</h3>
+				<p>
+					<i>Encontrar un elemento y hacer algo con el.</i><br>
+					jQuery permite a los desarrolladores escribir menos código 
+					para lograr los mismos efectos que se lograrían con JavaScript puro, 
+					lo que resulta en un desarrollo más rápido y eficiente. 
+					Ofrece una amplia gama de funciones para seleccionar elementos HTML, 
+					manipular su contenido, modificar estilos, realizar animaciones 
+					y trabajar con AJAX para cargar datos de forma asíncrona.
+				</p>
+
+				<h3 id="comousarjquery">- ¿Como usar jQuery?</h3>
+				<p>
+					Para usar jQuery en un documento HTML, primero debemos incluir la 
+					biblioteca de jQuery en el encabezado del documento. Luego, podemos 
+					escribir código jQuery entre las etiquetas <b>&lt;script&gt;</b> en el 
+					cuerpo del documento o en un archivo externo con la extensión .js.
+				</p>
+				<pre>
+					<code>
+	<span class="comentario">&lt;!-- Incluimos la biblioteca de jQuery --&gt;</span>
+	&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+					</code>
+				</pre>
+				<p>Una vez cargado el <b>src</b> podemos crear nuestro archivo <i><b>app.js</b></i> y empezar a escribir
+					nuestro código jQuery.</p>
+				</p>
+
+				<h3 id="readyevent">- Ready event</h3>
+				<p>
+					Ofrece una manera de ejecutar codigo JS tan pronto como el DOM de 
+					nuestra pagina sea seguro de manipular.
+					Basicamanete espera a que todo el HTML termine de cargar 
+					para poder ejecutar codigo JS.
+				</p>
+				<pre>
+					<code>
+	<span class="comentario">// Esto es una buena practica</span>
+	$(document).ready(function(){
+		<span class="comentario">// Bloque de código</span>
+	})
+					</code>
+				</pre>
+
+				<h3 id="selectores">- Selectores</h3>
+				<dl>
+					<dt>$('.clase');</dt>
+					<dd>Por clase</dd>
+					<dt>$('elemento');</dt>
+					<dd>Por elemento</dd>
+
+					<dt>$('elemento1, elemento2');</dt>
+					<dd>Varios elementos</dd>
+
+					<dt>$(':input');</dt>
+					<dd>Todos los elementos de entrada</dd>
+
+					<dt>$(':checked');</dt>
+					<dd>Elementos de entrada marcados</dd>
+
+					<dt>$('parent > child');</dt>
+					<dd>Elemento secundario directo de un elemento principal</dd>
+
+					<dt>$('prev + next');</dt>
+					<dd>Elemento siguiente directamente adyacente a un elemento anterior</dd>
+
+					<dt>$('[atributo]');</dt>
+					<dd>Por atributo</dd>
+
+					<dt>$('[atributo="valor"]');</dt>
+					<dd>Por atributo y valor específico</dd>
+				</dl>
+
+				<h3 id="atributosyclases">- Atributos y clases</h3>
+				<p>
+					Algunos pueden ser utilizados como <b>Getters (obtener el dato)</b>
+					y otros pueden ser utilizados como <b>Setters (establecer el dato)</b>
+				</p>
+				<dl>
+					<dt>attr()</dt>
+					<dd>Es para controlar atributos de la etiqueta.</dd>
+					<dt>html()</dt>
+					<dd>Para modificar el HTML.</dd>
+					<dt>text()</dt>
+					<dd>Se utiliza para obtener o establecer el texto contenido dentro de los elementos seleccionados.</dd>
+					<dt>val()</dt>
+					<dd>Es para modificar o extraer la información dada por el usuario.</dd>
+				</dl>
+
+				<pre>
+					<code>
+		<span class="comentario">// Como Getter</span>
+		var texto = $('#id').text()
+
+		<span class="comentario">// Como Setter</span>
+		$('#id').text('Nuevo texto')
+					</code>
+				</pre>
+
+				<h3 id="ejemplodemetodos">- Ejemplo de metodos</h3>
+				<p>
+					Mostraremos  una serie de métodos de jQuery que se 
+					utilizan para manipular atributos y clases de elementos 
+					HTML seleccionados.
+				</p>
+
+				<dl>
+					<dt>$('#id').attr('atributNombre', 'valor');</dt>
+					<dd>Este método se utiliza para establecer el valor de un atributo específico en el elemento seleccionado.</dd>
+					<dt>$('#id').removeAttr('atributNombre');</dt>
+					<dd>Establece el atributo atributoNombre del elemento con el id "id" al valor "valor".</dd>
+					<dt>$('#id').addClass('claseNombre');</dt>
+					<dd> Agrega una clase específica al elemento seleccionado</dd>
+					<dt>$('#id').removeClass('claseNombre');</dt>
+					<dd>Elimina una clase específica del elemento seleccionado.</dd>
+					<dt>$('#id').toggleClass('claseNombre');</dt>
+					<dd>Alterna la presencia de una clase específica en el elemento seleccionado. Si el elemento ya tiene la clase, la eliminará; si no la tiene, la agregará. Es útil para alternar estados como activo/inactivo o visible/oculto.</dd>
+				</dl>
+				
+				<h3 id="traversing">- Traversing</h3>
+				<p>
+					<i>Es el hecho de navegar por el DOM</i>
+				</p>
+
+				<h4>Familia:</h4>
+				<dl>
+					<dt>.parent()</dt>
+					<dd>Selecciona el elemento padre directo del elemento seleccionado.</dd>
+					
+					<dt>.parents()</dt>
+					<dd>Selecciona todos los ancestros del elemento seleccionado.</dd>
+					
+					<dt>.siblings()</dt>
+					<dd>Selecciona todos los elementos hermanos del elemento seleccionado.</dd>
+					
+					<dt>.children()</dt>
+					<dd>Selecciona todos los elementos secundarios directos del elemento seleccionado.</dd>
+				</dl>
+
+				<h4>Proximidad:</h4>
+				<dl>
+					<dt>.closest()</dt>
+					<dd>Selecciona el elemento más cercano que coincide con un selector, empezando por el propio elemento y ascendiendo en el DOM hasta alcanzar el documento.</dd>
+					
+					<dt>.next()</dt>
+					<dd>Selecciona el siguiente elemento inmediato del elemento seleccionado.</dd>
+					
+					<dt>.prev()</dt>
+					<dd>Selecciona el elemento anterior inmediato del elemento seleccionado.</dd>
+					
+					<dt>.nextAll()</dt>
+					<dd>Selecciona todos los elementos siguientes del elemento seleccionado.</dd>
+					
+					<dt>.prevAll()</dt>
+					<dd>Selecciona todos los elementos anteriores del elemento seleccionado.</dd>
+				</dl>
+
+				<!-- ... FALTAN DE ARIBA ... -->
+
+				<h3 id="manejodeeventos">- Manejo de eventos</h3>
+				<pre>
+					<code>
+	<span class="comentario">/* Esta línea establece un evento personalizado llamado 'handler' 
+	en el elemento con el id "id". Cuando se activa este evento, se ejecuta la función proporcionada 
+	como segundo argumento. Este método proporciona una forma de vincular múltiples eventos al 
+	mismo elemento y manejarlos con una sola función. */</span>
+	$('#id').on('handler', function(){<span class="comentario">/* Tu codigo */</span>});
+
+	<span class="comentario">/* Esta línea activa manualmente el evento 'click' en el elemento con el id "id". 
+	Esto simula el comportamiento de hacer clic en el elemento. */</span>
+	$('#id').trigger('click');
+	
+	<span class="comentario">/*  Esta línea vincula la función proporcionada como argumento para ejecutarse 
+	cuando se hace clic en el elemento con el id "id". Es una forma abreviada de asignar 
+	un controlador de eventos al evento 'click'. */</span>
+	$('#id').click(function(){<span class="comentario">/* Tu codigo */</span>});
+
+	<span class="comentario">/* Esta línea vincula la función proporcionada como argumento para ejecutarse 
+	cuando el puntero del mouse se desplaza sobre el elemento con el id "id". La función se ejecuta tanto 
+	cuando el puntero del mouse entra como cuando sale del elemento. */</span>
+	$('#id').hover(function(){<span class="comentario">/* Tu codigo */</span>});
+
+	<span class="comentario">/* Esta línea vincula la función proporcionada como argumento para ejecutarse 
+	cuando el elemento con el id "id" recibe el foco. Por ejemplo, cuando un campo de entrada de texto 
+	es seleccionado por el usuario. */</span>
+	$('#id').focus(function(){<span class="comentario">/* Tu codigo */</span>});
+
+	<span class="comentario">/* Esta línea vincula la función proporcionada como argumento para ejecutarse 
+	cuando se realiza un evento de alternancia en el elemento con el id "id". Sin embargo, hay un error en 
+	esta línea. El método .toggle() en jQuery se utiliza para alternar la visibilidad de un elemento, 
+	no para manejar eventos. Parece que se ha cometido un error y debería revisarse. */</span>
+	$('#id').toogle(function(){<span class="comentario">/* Tu codigo */</span>});
+	
+	<span class="comentario">// Muchos mas...</span>
+					</code>
+				</pre>
+
+				<h3 id="manipulacióndelDOM">- Manipulación del DOM</h3>
+				<table class="table">
+					<thead>
+						<tr>
+						<th class="col">Método</th>
+						<th class="col">Descripción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>.prepend()</td>
+							<td>Inserta contenido al comienzo del elemento seleccionado.</td>
+						</tr>
+						<tr>
+							<td>.append()</td>
+							<td>Inserta contenido al final del elemento seleccionado.</td>
+						</tr>
+						<tr>
+							<td>.before()</td>
+							<td>Inserta contenido antes del elemento seleccionado.</td>
+						</tr>
+						<tr>
+							<td>.after()</td>
+							<td>Inserta contenido después del elemento seleccionado.</td>
+						</tr>
+						<tr>
+							<td>.remove()</td>
+							<td>Elimina el elemento seleccionado y su contenido del DOM.</td>
+						</tr>
+						<tr>
+							<td>.replaceAll()</td>
+							<td>Reemplaza el elemento seleccionado con otro elemento.</td>
+						</tr>
+						<tr>
+							<td>.empty()</td>
+							<td>Elimina todos los hijos de los elementos seleccionados.</td>
+						</tr>
+						<tr>
+							<td>.html()</td>
+							<td>Obtiene o establece el contenido HTML de los elementos seleccionados.</td>
+						</tr>
+						<tr>
+							<td>.text()</td>
+							<td>Obtiene o establece el contenido de texto de los elementos seleccionados.</td>
+						</tr>
+					</tbody>
+				</table>
 			</article>
 		</div>
 
