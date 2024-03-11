@@ -28,11 +28,8 @@
 	</head>
 	<body class="container overflow-auto">
 		<!--  ---------- NAVBAR ----------  -->
-		<nav class="navbar fixed-top">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="./Public/emoji.svg" width="40" alt="LOGO" />
-				</a>
+		<nav class="mt-4">
+			<div class="">
 				<form class="d-flex" role="search">
 					<input
 						id="userSearch"
@@ -103,6 +100,8 @@
 	&lt;/html&gt;
 					</code>
 				</pre>
+
+				<h3>Como puedo crear mi archivo HTML</h3>
 
 				<h3 id="encabezados">- Encabezados</h3>
 				<p>
@@ -1777,6 +1776,122 @@
 						</tr>
 					</tbody>
 				</table>
+
+				<h3 id="selectores">- Peticiones HTTP</h3>
+
+				<p>Las peticiones HTTP son la base de cualquier transferencia de datos en la web. Son utilizadas por el cliente para enviar una acción a realizar al servidor. Existen varios tipos de métodos de petición HTTP, los más comunes son GET, POST, PUT, DELETE, entre otros.</p>
+
+
+				<dl>
+					<dt>GET</dt>
+					<dd>Solicita una representación de un recurso específico. Las peticiones usando GET solo deben recuperar datos.</dd>
+					<pre>
+						<code>
+$.ajax({
+	<span class="comentario">// URL</span>
+	url: 'https://jsonplaceholder.typicode.com/posts',
+	<span class="comentario">// Tipo de petición</span>
+	type: 'GET',
+	<span class="comentario">// Formato JSON</span>
+	dataType: 'json',
+	<span class="comentario">// Avisamos que esta fuera de nuestra url</span>
+	crossDomain: true,
+	<span class="comentario">// Mostramos el error</span>
+	error: function(error){
+		console.log(error);
+	}
+<span class="comentario">// Si es status 200+ hacemos:</span>
+}).done(function(response){
+	<span class="comentario">// Aqui hacemos un console.log de el response</span>
+	console.log(response);
+	<span class="comentario">// Con el metodo .each() recorremos cada objeto</span>
+	$(response).each(function(){
+		<span class="comentario">/* usamos this.PROPIEDAD 
+		para mostrar la de la iteración */</span>
+		console.log(this.title);
+	});
+});
+						</code>
+					</pre>
+
+					<dt>POST</dt>
+					<dd>Se utiliza para enviar una entidad a un recurso específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.</dd>
+					<pre>
+						<code>
+$.ajax({
+	url: 'https://jsonplaceholder.typicode.com/posts',
+	<span class="comentario">// Tipo POST</span>
+	type: 'POST',
+	<span class="comentario">// JSON</span>
+	dataType: 'json',
+	crossDomain: true,
+	<span class="comentario">// Aqui definimos los datos que queremos mandar</span>
+	data: {
+		title: 'Mi nuevo post',
+		body: 'Contenido de mi nuevo post',
+		userId: 1
+	},
+	<span class="comentario">// Manejamos el error</span>
+	error: function(status, error) {
+		console.error('Error al crear un nuevo post:', status, error);
+	}
+
+<span class="comentario">// Si es status 200+ hacemos:</span>
+}).done(function(result){
+	console.log(result);
+});
+	
+						</code>
+					</pre>
+
+					<dt>PUT</dt>
+					<dd>Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.</dd>
+					<pre>
+						<code>
+$.ajax({
+	<span class="comentario">/* En la URL pasamos el dato que nos pide la api 
+	para asi poder cambiar un post en especifico */</span>
+	<span class="comentario">                           // Aqui nos pide el id</span>
+	url: 'https://jsonplaceholder.typicode.com/posts/1',
+	<span class="comentario">// Tipo PUT</span>
+	type: 'PUT',
+	dataType: 'json',
+	<span class="comentario">// Contenido que queremos cambiar</span>
+	data: {
+		id: 1,
+		title: 'Título actualizado',
+		body: 'Contenido actualizado',
+		userId: 1
+	},
+	error: function(status, error) {
+		console.error('Error al actualizar el post:', status, error);
+	}
+}).done(function(result){
+	console.log('Post actualizado:', result);
+});
+						</code>
+					</pre>
+
+
+					<dt>DELETE</dt>
+					<dd>Borra un recurso específico.</dd>
+					<pre>
+						<code>
+$.ajax({
+	url: 'https://jsonplaceholder.typicode.com/posts/1',
+	type: 'DELETE',
+	dataType: 'json',
+	error: function(status, error) {
+		console.error('Error al eliminar el post:', status, error);
+	}
+}).done(function(result){
+	console.log('Post eliminado:', result);
+})
+						</code>
+					</pre>
+
+				</dl>
+
 			</article>
 		</div>
 		<!--  ---------- FOOTER ----------  -->

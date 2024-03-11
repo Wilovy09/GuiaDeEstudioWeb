@@ -87,4 +87,5 @@ $(document).ready(function(){
     $('#userSearch').autocomplete({
         source: secciones
     });
+
 });
